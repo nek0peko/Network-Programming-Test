@@ -172,7 +172,7 @@ int main(int argc, char *argv[]) {
     pid_t pid;
     struct sockaddr_in serv_addr, cli_addr;
     int listenfd, connfd;
-    socklen_t len;
+    socklen_t len = sizeof(cli_addr);
 
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
